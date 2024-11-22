@@ -2,7 +2,7 @@
 
 namespace PromoCodeFactory.WebHost.Models;
 
-public sealed class EmployeeRequest : AddEmployeeRequest
+public sealed class UpdateEmployeeRequest : AddEmployeeRequest
 {
     public Guid Id { get; set; }
 }

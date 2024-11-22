@@ -32,17 +32,11 @@ public static class EmployeeMapper
             FirstName = request.FirstName,
             LastName = request.LastName,
             Email = request.Email,
-            Roles = request.Roles.Select(x => new Role()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Description = x.Description
-            }).ToList(),
             AppliedPromocodesCount = request.AppliedPromocodesCount
         };
     }
 
-    public static Employee Map(this EmployeeRequest request)
+    public static Employee Map(this UpdateEmployeeRequest request)
     {
         return new Employee()
         {
@@ -50,11 +44,6 @@ public static class EmployeeMapper
             FirstName = request.FirstName,
             LastName = request.LastName,
             Email = request.Email,
-            Roles = request.Roles.Select(x => new Role()
-            {
-                Name = x.Name,
-                Description = x.Description
-            }).ToList(),
             AppliedPromocodesCount = request.AppliedPromocodesCount
         };
     }

@@ -10,7 +10,5 @@ public class AddEmployeeRequest
 
     public string Email { get; set; }
 
-    public IEnumerable<RoleItemRequest> Roles { get; set; }
-
     public int AppliedPromocodesCount { get; set; }
 }

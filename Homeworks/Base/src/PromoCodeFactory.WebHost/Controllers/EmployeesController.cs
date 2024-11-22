@@ -78,10 +78,10 @@ public class EmployeesController(IRepository<Employee> employeeRepository) : Con
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPut]
-    public async Task<ActionResult<EmployeeResponse>> UpdateEmployeeAsync(EmployeeRequest request)
+    public async Task<ActionResult<EmployeeResponse>> UpdateEmployeeAsync(UpdateEmployeeRequest request)
     {
         if (request == null)
-            return BadRequest($"{nameof(EmployeeRequest)} cannot be null");
+            return BadRequest($"{nameof(UpdateEmployeeRequest)} cannot be null");
 
         if (request.Id == Guid.Empty)
             return BadRequest($"Id cannot be empty");
