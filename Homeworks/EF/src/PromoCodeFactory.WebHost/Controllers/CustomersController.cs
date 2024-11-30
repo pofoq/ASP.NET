@@ -97,6 +97,12 @@ namespace PromoCodeFactory.WebHost.Controllers
             };
 
             customer = await _customerRepository.CreateAsync(customer);
+
+            customer.CustomerPreferences = request.PreferenceIds
+                .Select(pid => new CustomerPreference { CustomerId = customer.Id, PreferenceId = pid })
+                .ToList();
+            await _customerRepository.UpdateAsync(customer);
+
             return Ok(customer.Id);
         }
 
