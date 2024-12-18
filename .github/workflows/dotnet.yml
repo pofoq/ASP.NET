@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "main", "lesson04-Docker-Compose" ]
+    branches: [ "lesson04-Docker-Compose" ]
   pull_request:
-    branches: [ "main", "lesson04-Docker-Compose" ]
+    branches: [ "lesson04-Docker-Compose" ]
 
 env:
   WORK_DIR: ./Homeworks/UnitTests/src
@@ -24,11 +24,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
+      working-directory: $WORK_DIR
       run: dotnet restore
-      working-directory: $WORK_DIR
     - name: Build
+      working-directory: $WORK_DIR
       run: dotnet build --no-restore
-      working-directory: $WORK_DIR
     - name: Test
-      run: dotnet test --no-build --verbosity normal
       working-directory: $WORK_DIR
+      run: dotnet test --no-build --verbosity normal
