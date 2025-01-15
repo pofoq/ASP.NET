@@ -1,0 +1,23 @@
+WINDOWS 
+
+-- Установить Git
+> winget install git.git
+
+-- Установить Node.js
+> winget install OpenJS.NodeJS.LTS 
+
+-- Перейти в папку проекта
+> cd C:\Users\1\source\repos\otus\ASP.NET\Homeworks\Frontend
+
+
+-------------------------------------
+VITE
+-------------------------------------
+-- Create App Vite 
+> npm create vite@latest my-vite-app
+
+> cd my-vite-app
+> npm install
+> npm run dev
+
+> npm install axios
