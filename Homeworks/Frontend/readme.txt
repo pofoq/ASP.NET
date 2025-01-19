@@ -26,4 +26,16 @@ VITE
 ROUTER
 -------------------------------------
 > npm install react-router-dom
-> npm install @types/react-router-dom
+> npm install @types/react-router-dom 
+
+-------------------------------------
+REDUX
+-------------------------------------
+> npm install @reduxjs/toolkit react-redux
+> npm install --save-dev @types/react-redux
+
+> npm install react react-dom
+
+> npm install bootstrap
+> npm i --save bootstrap @popperjs/core
+> npm i --save-dev sass

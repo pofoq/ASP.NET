@@ -5,7 +5,7 @@ interface TextProps {
     punchline: string;
 }
 
-const TextComponent: React.FC<TextProps> = (TextProps) => {
+const JokeComponent: React.FC<TextProps> = (TextProps) => {
     return (
         <div>
             <div style={{ backgroundColor: 'grey', color: 'white', padding: '10px' }}>
@@ -18,4 +18,4 @@ const TextComponent: React.FC<TextProps> = (TextProps) => {
     );
 };
 
-export default TextComponent;
+export default JokeComponent;
