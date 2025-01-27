@@ -13,7 +13,11 @@ services:
   web-client-app:
     image: asp-client-app
     build: 
-      context: .
-      dockerfile: WebClientApp/Dockerfile
+      context: ./WebClientApp
+#      dockerfile: ./WebClientApp/Dockerfile
+    working_dir: /app
     ports:
       - "5272:5272" # Пробрасываем порты 5272 контейнера на порт 5272 хоста
+    volumes:
+      - ./WebClientApp:/app
+      - /app/node_modules
