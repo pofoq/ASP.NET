@@ -1,6 +1,6 @@
 services:
   web-api-app: #Название сервиса
-    image: web-api-app
+    image: asp-api-app
     build: 
       context: .
       dockerfile: WebApiApp/Dockerfile
@@ -11,7 +11,7 @@ services:
     volumes:
       - .:/src
   web-client-app:
-    image: web-api-client
+    image: asp-client-app
     build: 
       context: .
       dockerfile: WebClientApp/Dockerfile
